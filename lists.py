@@ -1,5 +1,7 @@
 from random import choice
 
+week_day = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
+
 
 def random_emoji():
     list_emoji = [

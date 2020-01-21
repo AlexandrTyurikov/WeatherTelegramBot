@@ -1,9 +1,9 @@
 import pyowm
+
 from db_operations import db_read
 from datetime import datetime, timedelta
 from constants import api_key_pyowm
-
-week_day = {0: 'Пн',1: 'Вт', 2: 'Ср', 3: 'Чт', 4: 'Пт', 5: 'Сб', 6: 'Вс'}
+from lists import week_day
 
 
 def answer_now_w_city(user_id):
