@@ -1,5 +1,5 @@
 from telebot import TeleBot, types
-from constants import api_token_bot, support_photo_id
+from constants import api_token_bot, support_photo_url
 from db_operations import (
     db_add_user,
     db_date_last_visit,
@@ -171,7 +171,7 @@ def handler_message(message: types.Message):
         elif message.text == "Нужна подсказка":
             answer = "Вот Вам инструкция:\nнажмите на скрепку\n👉🏻 📎 \n👉🏻 Геопозиция\n👉🏻 Отправить свою геопозицию"
             bot.send_chat_action(message.from_user.id, 'upload_photo')
-            bot.send_photo(message.from_user.id, support_photo_id, answer)
+            bot.send_photo(message.from_user.id, support_photo_url, answer)
             log(message, answer)
         elif message.text == 'Назад 👈🏻':
             if db_0_loc(message) == 0 and db_0_city(message) == '0':
